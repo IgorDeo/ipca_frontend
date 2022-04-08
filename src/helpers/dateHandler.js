@@ -14,13 +14,14 @@ export class DateHandler {
     if (!this.hasFinalDate && !this.hasInitialDate) {
       return {
         startDate: dayjs()
+          .subtract(1, "month")
           .subtract(1, "year")
           .startOf("month")
           .format("DD/MM/YYYY"),
         endDate: dayjs()
-          .subtract(1, "month")
-          .startOf("month")
-          .format("DD/MM/YYYY"),
+        .subtract(1, "month")
+        .startOf("month")
+        .format("DD/MM/YYYY")
       };
     }
 
