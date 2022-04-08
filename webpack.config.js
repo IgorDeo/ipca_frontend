@@ -1,5 +1,4 @@
 import HtmlWebpackPlugin from 'html-webpack-plugin';
-import path from 'path';
 
 const HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
   template: "./src/index.html",
@@ -31,8 +30,21 @@ export default{
       {
         test: /\.css$/i,
         use: ["style-loader", "css-loader"],
+      },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+          },
+        ],
       }
     ]
   },
   plugins: [HTMLWebpackPluginConfig]
 }
+
+
+
+
+
