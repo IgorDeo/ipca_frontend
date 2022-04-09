@@ -80,10 +80,10 @@ const Body = () => {
 
           <div className="col-auto my-1 mt-4">
             {accumulatedTax && (
-              <h2>
+              <h3>
                 IPCA Acumulado: <strong>{accumulatedTax}%</strong> entre{" "}
                 {range.startDate} e {range.endDate}
-              </h2>
+              </h3>
             )}
           </div>
         </div>
